@@ -1,0 +1,29 @@
+<div class="card bg-dark text-center text-white">
+    <img src="http://getwallpapers.com/wallpaper/full/a/5/d/544750.jpg" class="card-img" alt="Responsive image" style="width:1365px;height:620px;">
+    <div class="card-img-overlay">
+
+<div class="container mt-4">
+    <table class="table table-hover table-bordered">
+        <thead class="thead-dark">
+            <tr>
+                <th>ID</th>
+                <th>User Id</th>
+                <th>Book Id</th>
+                <th>Issue Date</th>
+                <th>Return Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor='let issue of issueInfo'>
+                <td>{{issue.id}}</td>
+                <td>{{issue.uid}}</td>
+                <td>{{issue.bid}}</td>
+                <td>{{issue.issueDate}}</td>
+                <td>{{issue.returnDate}}</td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>
+</div>
+</div>

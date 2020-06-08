@@ -1,0 +1,65 @@
+<div class="container">
+  
+        <img src="https://cdn.hipwallpaper.com/i/75/53/0cFvKO.jpg" class="card-img" alt="Responsive image" style="width:1350px;height:565px;">
+        <div class="card-img-overlay">
+        
+    <div class="alert alert-danger" *ngIf='error'>{{error}}</div>
+    <div class="alert alert-success" *ngIf='message'>{{message}}</div>
+    <div class="col-md-4 offset-md-4 mt-5 mb-3">
+        <form #loginForm='ngForm' (ngSubmit)='loginUser(loginForm)'>
+          
+          
+            <div class="card">
+                <div class="card-header bg-warning">
+                    <h4 class="text-center">Login Form</h4>
+                </div>
+                <div class="card-body">
+                    
+                    <div class="form-group">
+                        
+                        <label for="email"><i class="fa fa-envelope" aria-hidden="true"></i> Email:</label>
+                        <div class="input-group-prepend">
+                            <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+                            
+                        </div>
+                        
+                        <input  type="email" name="email" id="email" #email='ngModel' ngModel class="form-control" required
+                            email minlength="10" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                            placeholder="Enter Email">
+                        <div *ngIf='email.touched && email.invalid'>
+                            <div *ngIf='email.errors.required' class="alert alert-danger">This field is mandatory</div>
+                            <div *ngIf='email.errors.minlength' class="alert alert-danger">This field accepts minimum 10
+                                characters</div>
+                            <div *ngIf='email.errors.pattern' class="alert alert-danger">This field accepts only email</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="password"><i class="fa fa-lock" aria-hidden="true"></i>Password:</label>
+                        <input type="password" name="password" class="form-control" id="password" #password='ngModel'
+                            placeholder="Enter password" ngModel required password minlength="6">
+                        <div *ngIf='password.touched && password.invalid'>
+                            <div *ngIf='password.errors.required' class="alert alert-danger">This field is mandatory</div>
+                            <div *ngIf='password.errors.minlength' class="alert alert-danger">This field accepts minimum 6
+                                characters
+                            </div>
+                            <div *ngIf='password.errors.password' class="alert alert-danger">This field accepts only
+                                password</div>
+                            <div *ngIf='password.errors.pattern' class="alert alert-danger">This field accepts atleast one
+                                uppercase , one symbol, and a numerical
+                            </div>
+    
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer bg-light">
+                    
+                    <a routerLink='/register'>dont have an account?Please Register</a>
+                    <button type="submit" class="btn btn-danger btn-md">Login <i class="fa fa-sign-in"></i></button>
+                </div>
+            </div>
+        </form>
+    
+    </div>
+    </div>
+    
+    </div>

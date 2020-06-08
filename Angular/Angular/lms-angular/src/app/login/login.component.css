@@ -1,0 +1,37 @@
+
+.container{
+    background-image: url("https://cdn.hipwallpaper.com/i/75/53/0cFvKO.jpg");
+   margin-right: 1100px;
+   background-position: center;
+    background-size: 100% 100%;
+    margin-right: 500px;
+    max-width: 5000px;
+   
+
+    position: fixed;
+}
+.card{
+    margin: 50px 75px 100px 125px 150px;
+}
+.fa.fa-envelope{
+width: 15px;
+
+color: black;
+border:0 !important;
+}
+.fa.fa-lock{
+    width: 15px;
+    
+    color: black;
+    border:0 !important;
+    }
+
+
+.card-body{
+
+  
+    margin-top: initial;
+}
+.col-md-4.offset-md-4.mt-5.mb-3{
+    width: 500cm;
+}

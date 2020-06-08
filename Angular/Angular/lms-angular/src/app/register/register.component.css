@@ -1,0 +1,16 @@
+.container{
+
+    background-image: url("https://image.freepik.com/free-vector/worldwide-connection-blue-background-illustration-vector_53876-61764.jpg" ) ;
+    background-position: center;
+    background-size: 100% 100%;
+    margin-right: 500px;
+    max-width: 5000px;
+    width: 100%;
+
+    
+    position: relative;
+}
+.card{
+
+    width: 500px;
+}

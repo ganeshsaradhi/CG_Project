@@ -1,0 +1,34 @@
+<div class="card bg-dark text-center text-white">
+    <img src="http://getwallpapers.com/wallpaper/full/a/5/d/544750.jpg" class="card-img" alt="Responsive image" style="width:1365px;height:580px;">
+    <div class="card-img-overlay">
+<div class="red">
+<div class="container mt">
+    <table class="table table-hover table-bordered">
+        <thead class="thead-dark">
+            <tr>
+                <th>User ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Password</th>
+                <th>Mobile</th>
+                <th>Role</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor='let users of usersInfo'>
+                <td>{{users.uid}}</td>
+                <td>{{users.firstName}}</td>
+                <td>{{users.lastName}}</td>
+                <td>{{users.email}}</td>
+                <td>{{users.password}}</td>
+                <td>{{users.mobile}}</td>
+                <td>{{users.role}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
+</div>
+</div>
+</div>

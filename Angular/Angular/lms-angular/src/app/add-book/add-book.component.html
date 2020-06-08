@@ -1,0 +1,71 @@
+<div class="card bg-dark text-center text-white">
+    <img src="http://getwallpapers.com/wallpaper/full/a/5/d/544750.jpg" class="card-img" alt="Responsive image" style="width:1365px;height:580px;">
+    <div class="card-img-overlay">
+
+<div class="alert alert-success" *ngIf='message'>{{ message }}</div>
+<div class="col-md-4 offset-4 mt-4">
+    <h4 class="text-center">Add Book</h4>
+    <form #addBookForm='ngForm' (ngSubmit)='postBook(addBookForm)'>
+        <div class="form-group form1">
+            <label for="bookName">Book Name</label>
+            <input type="text" name="bookName" id="bookName" #bookName='ngModel' ngModel class="form-control" required
+                bookName minlength="3" pattern="[a-zA-Z ]*">
+            <div *ngIf='bookName.touched && bookName.invalid'>
+                <div *ngIf='bookName.errors.required' class="alert alert-danger">This field is mandatory</div>
+                <div *ngIf='bookName.errors.minlength' class="alert alert-danger">This field accepts minimum 3
+                    characters
+                </div>
+                <div *ngIf='bookName.errors.pattern' class="alert alert-danger">This field accepts only name</div>
+            </div>
+        </div>
+        <div class="form-group form1">
+            <label for="author">Author</label>
+            <input type="text" name="author" id="author" #author='ngModel' ngModel class="form-control" required author
+                minlength="4" pattern="[a-zA-Z ]*">
+            <div *ngIf='author.touched && author.invalid'>
+                <div *ngIf='author.errors.required' class="alert alert-danger">This field is mandatory</div>
+                <div *ngIf='author.errors.minlength' class="alert alert-danger">This field accepts minimum 4 characters
+                </div>
+                <div *ngIf='author.errors.pattern' class="alert alert-danger">This field accepts only name</div>
+            </div>
+        </div>
+        <div class="form-group form1">
+            <label for="category">Category</label>
+            <select name="category" id="category" #category='ngModel' ngModel class="form-control" required>
+
+                <option value="Fiction">Fiction</option>
+                <option value="Programing">Programing</option>
+                <option value="Journals">Journals</option>
+                <option value="Electronics">Electronics</option>
+                <option value="Computers">Computers</option>
+                <option value="Novels">Novels</option>
+                <option value="Electrical">Electrical</option>
+                <option value="Chemistry">Chemistry</option>
+                <option value="Physics">Physics</option>
+                <option value="Mathematics">Mathematics</option>
+                
+            </select>
+            <div *ngIf='category.touched && category.invalid'>
+                <div *ngIf='category.errors.required' class="alert alert-danger">This field is mandatory</div>
+            </div>
+
+        </div>
+        <div class="form-group form1">
+            <label for="publisher">Publisher</label>
+            <input type="text" name="publisher" id="publisher" #publisher='ngModel' ngModel class="form-control"
+                required publisher minlength="5" pattern="[a-zA-Z ]*">
+            <div *ngIf='publisher.touched && publisher.invalid'>
+                <div *ngIf='publisher.errors.required' class="alert alert-danger">This field is mandatory</div>
+                <div *ngIf='publisher.errors.minlength' class="alert alert-danger">This field accepts minimum 5
+                    characters
+                </div>
+                <div *ngIf='publisher.errors.pattern' class="alert alert-danger">This field accepts only name</div>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-outline-primary float-right">
+            Add Book
+        </button>
+    </form>
+    </div>
+    </div>
+</div>
